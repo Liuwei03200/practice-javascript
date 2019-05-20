@@ -1,2 +1,2 @@
-# test-javascript
+# practice-javascript
 practice javascript;

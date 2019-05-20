@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>拖拽-es6-class-extends</title>
+		<style type="text/css">
+			html,body{
+				height: 100%;
+				padding: 0;
+				margin: 0;
+			}
+			.box{
+				width: 100px;
+				height: 100px;
+				background-color:#ff00ff;
+				position: absolute;
+				top: 0px;
+			}
+			.left{
+				left: 0px;
+			}
+			.right{
+				right: 0px;
+			}
+			
+		</style>
+	</head>
+	
+	<body>
+		<div class="box left" id="div1">
+			drag
+		</div>
+		<div class="box right" id="div2">
+			limitdrag
+		</div>
+	</body>
+	<script type="module">
+		import {Drag , LimitDrag} from './1.js';
+		new Drag('div1');
+		new LimitDrag('div2');
+	</script>
+</html>
