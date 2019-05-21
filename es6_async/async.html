@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>async基本操作练习</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			
+			async function fn(){
+				await Promise.reject('出现错误').catch(err=>{
+					console.log(err);
+				});
+				let a = await Promise.resolve('success!');
+				console.log(a);
+			}
+			fn().then(result=>{
+				console.log(result);
+			}).catch(err=>{
+				console.log('error:'+err);
+			});
+		</script>
+	</body>
+</html>
