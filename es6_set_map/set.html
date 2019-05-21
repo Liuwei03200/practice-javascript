@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>set基本操作练习</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			let setArr =new Set(['a','b','c']);
+			console.log(setArr);
+			setArr.add('l');
+			setArr.add('i');
+			setArr.add('u');
+			console.log(setArr);
+			setArr.delete('a');
+			console.log(setArr);
+			console.log(setArr.has('l'));
+			console.log(setArr.size);
+			setArr.clear();
+			console.log(setArr);
+			//数组去重:
+			let arr = [1,2,3,4,5,6,2,1,3,4,5];
+			let setArr2=new Set(arr);
+			let newArr = [...setArr2];
+			console.log(newArr);
+			//set 循环 for...of 和 forEach
+			for (let item of setArr2.entries()){
+				console.log(item);
+			}
+			setArr2.forEach((value,key)=>{
+				console.log(key,value);
+			});
+		</script>
+	</body>
+</html>
